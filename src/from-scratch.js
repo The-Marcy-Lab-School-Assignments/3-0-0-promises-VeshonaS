@@ -1,10 +1,19 @@
-const resolvedWrapper = () => {
+const resolvedWrapper = (val) => {
+  return promise = new Promise((resolve) => {
+    resolve(val)
+  })
 };
 
-const rejectedWrapper = () => {
+const rejectedWrapper = (mes) => {
+return new Promise((_, reject)=> {
+  reject(new Error (mes))
+})
 };
 
-const handleResolvedPromise = () => {
+const handleResolvedPromise = (prom) => {
+ return prom.then(val => {console.log(val)
+  return val
+ })
 };
 
 const handleResolvedOrRejectedPromise = () => {
