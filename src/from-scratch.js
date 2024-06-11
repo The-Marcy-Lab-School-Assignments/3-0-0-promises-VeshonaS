@@ -16,10 +16,24 @@ const handleResolvedPromise = (prom) => {
  })
 };
 
-const handleResolvedOrRejectedPromise = () => {
+const handleResolvedOrRejectedPromise = (promise) => {
+  return promise.then(val => { console.log(val) 
+    return val 
+  }) 
+  .catch(error =>{
+    console.error(`Your error message was: ${error.message}`)
+    return null
+  }
+  )
 };
 
-const pauseForMs = () => {
+const pauseForMs = (millis) => {
+const promise = new Promise((resolve, reject)=> {
+  setTimeout(() => {
+    resolve(); 
+  }, millis);
+});
+  return promise 
 };
 
 module.exports = {
