@@ -1,3 +1,4 @@
+/** FEEDBACK: Great job getting all test cases to pass! You are killing it! */
 const resolvedWrapper = (val) => {
   return promise = new Promise((resolve) => {
     resolve(val)
@@ -5,6 +6,7 @@ const resolvedWrapper = (val) => {
 };
 
 const rejectedWrapper = (mes) => {
+  /** FEEDBACK: LOve that you are using a placeholder here, but in the future leave it as resolve out of convention! */
 return new Promise((_, reject)=> {
   reject(new Error (mes))
 })
